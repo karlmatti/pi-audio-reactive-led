@@ -192,6 +192,7 @@ def microphone_update(audio_samples):
     global y_roll, prev_rms, prev_exp, prev_fps_update
     # Normalize samples between 0 and 1
     y = audio_samples / 2.0**15
+    print("audio_samples",audio_samples)
     # Construct a rolling window of audio samples
     y_roll[:-1] = y_roll[1:]
     y_roll[-1, :] = np.copy(y)
@@ -244,6 +245,7 @@ def microphone_update(audio_samples):
 
 # Number of audio samples to read every time frame
 samples_per_frame = int(config.MIC_RATE / config.FPS)
+
 
 # Array containing the rolling audio sample window
 y_roll = np.random.rand(config.N_ROLLING_HISTORY, samples_per_frame) / 1e16

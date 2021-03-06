@@ -1,6 +1,6 @@
 from __future__ import print_function
 from __future__ import division
-
+from rpi_ws281x import *
 import platform
 import numpy as np
 import config
@@ -12,7 +12,7 @@ if config.DEVICE == 'esp8266':
 # Raspberry Pi controls the LED strip directly
 elif config.DEVICE == 'pi':
     import neopixel
-    strip = neopixel.Adafruit_NeoPixel(config.N_PIXELS, config.LED_PIN,
+    strip = Adafruit_NeoPixel(config.N_PIXELS, config.LED_PIN,
                                        config.LED_FREQ_HZ, config.LED_DMA,
                                        config.LED_INVERT, config.BRIGHTNESS)
     strip.begin()

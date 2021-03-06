@@ -3,8 +3,8 @@ from __future__ import print_function
 from __future__ import division
 import os
 
-DEVICE = 'esp8266'
-#DEVICE = 'pi'
+#DEVICE = 'esp8266'
+DEVICE = 'pi'
 """Device used to control LED strip. Must be 'pi',  'esp8266' or 'blinkstick'
 
 'esp8266' means that you are using an ESP8266 module to control the LED strip
@@ -34,7 +34,7 @@ if DEVICE == 'pi':
     """DMA channel used for generating PWM signal (try 5)"""
     BRIGHTNESS = 255
     """Brightness of LED strip between 0 and 255"""
-    LED_INVERT = True
+    LED_INVERT = False
     """Set True if using an inverting logic level converter"""
     SOFTWARE_GAMMA_CORRECTION = True
     """Set to True because Raspberry Pi doesn't use hardware dithering"""
@@ -58,7 +58,7 @@ GAMMA_TABLE_PATH = os.path.join(os.path.dirname(__file__), 'gamma_table.npy')
 MIC_RATE = 44100
 """Sampling frequency of the microphone in Hz"""
 
-FPS = 60
+FPS = 40
 """Desired refresh rate of the visualization (frames per second)
 
 FPS indicates the desired refresh rate, or frames-per-second, of the audio
@@ -83,7 +83,8 @@ MIN_FREQUENCY = 200
 MAX_FREQUENCY = 12000
 """Frequencies above this value will be removed during audio processing"""
 
-N_FFT_BINS = 24
+
+N_FFT_BINS = 12
 """Number of frequency bins to use when transforming audio to frequency domain
 
 Fast Fourier transforms are used to transform time-domain audio data to the
@@ -103,3 +104,4 @@ N_ROLLING_HISTORY = 2
 
 MIN_VOLUME_THRESHOLD = 1e-7
 """No music visualization displayed if recorded audio volume below threshold"""
+
