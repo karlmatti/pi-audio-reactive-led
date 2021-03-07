@@ -12,8 +12,8 @@ def hello():
 
     if request.method == 'POST':
         # form_data = request.form
-        reaction = json.dumps(request.form)
-        return "You chose " + json.dumps(request.form)
+        reaction = json.dumps(request.form['reaction'])
+        return "You chose " + reaction
 
 
 if __name__ == '__main__':
