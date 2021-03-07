@@ -10,7 +10,7 @@ def change_reaction(reaction):
 
 
 def start():
-    # state['isRunning'] = True
+    state['isRunning'] = True
     # # Initialize LEDs
     # led.update()
     # # Start listening to live audio stream
@@ -31,7 +31,7 @@ def hello():
             if not state['isRunning']:
                 start()
             change_reaction(reaction)
-            return "You chose " + reaction + ", is_running=" + state['isRunning']
+            return "You chose " + reaction + ", is_running=" + str(state['isRunning'])
         else:
             return "This kind of selection is not allowed!"
 
