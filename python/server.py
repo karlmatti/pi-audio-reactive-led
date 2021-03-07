@@ -1,10 +1,17 @@
-from flask import Flask
+from flask import Flask, render_template, request
+
 app = Flask(__name__)
 
 
 @app.route('/')
 def hello():
-    return "<html><body><h1 style='color:red'>I am hosted on Raspberry Pi !!!</h1></body></html>"
+    if request.method == 'GET':
+        return render_template('data.html')
+
+    if request.method == 'POST':
+        # form_data = request.form
+        return "request.form=" + request.form
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
