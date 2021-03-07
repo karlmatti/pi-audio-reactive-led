@@ -3,15 +3,14 @@ import led, microphone, visualization
 from flask import Flask, render_template, request
 
 app = Flask(__name__)
-global is_running
-
+state = {'isRunning': False}
 
 def change_reaction(reaction):
     pass
 
 
 def start():
-    is_running = True
+    state['isRunning'] = True
     # Initialize LEDs
     led.update()
     # Start listening to live audio stream
@@ -28,14 +27,13 @@ def hello():
         available_reactions = ['scroll', 'energy', 'spectrum']
         if reaction in available_reactions:
 
-            if not is_running:
+            if not state['isRunning']:
                 start()
             change_reaction(reaction)
-            return "You chose " + reaction + ", is_running=" + is_running
+            return "You chose " + reaction + ", is_running=" + state['isRunning']
         else:
             return "This kind of selection is not allowed!"
 
 
 if __name__ == '__main__':
-    is_running = False
     app.run(host='0.0.0.0')
