@@ -1,3 +1,5 @@
+import json
+
 from flask import Flask, render_template, request
 
 app = Flask(__name__)
@@ -10,7 +12,7 @@ def hello():
 
     if request.method == 'POST':
         # form_data = request.form
-        return request.form
+        return json.dumps(request.form)
 
 
 if __name__ == '__main__':
