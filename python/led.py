@@ -8,7 +8,7 @@ import config
 # Raspberry Pi controls the LED strip directly
 if config.DEVICE == 'pi':
     import neopixel
-    strip = Adafruit_NeoPixel(config.N_PIXELS, config.LED_PIN,
+    strip = PixelStrip(config.N_PIXELS, config.LED_PIN,
                                        config.LED_FREQ_HZ, config.LED_DMA,
                                        config.LED_INVERT, config.BRIGHTNESS)
     strip.begin()
