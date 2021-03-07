@@ -1,4 +1,4 @@
-import led, microphone, visualization
+#import led, microphone, visualization
 
 from flask import Flask, render_template, request
 
@@ -10,11 +10,12 @@ def change_reaction(reaction):
 
 
 def start():
-    state['isRunning'] = True
-    # Initialize LEDs
-    led.update()
-    # Start listening to live audio stream
-    microphone.start_stream(visualization.microphone_update)
+    # state['isRunning'] = True
+    # # Initialize LEDs
+    # led.update()
+    # # Start listening to live audio stream
+    # microphone.start_stream(visualization.microphone_update)
+    pass
 
 
 @app.route('/', methods=['GET', 'POST'])
