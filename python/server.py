@@ -12,7 +12,7 @@ def hello():
 
     if request.method == 'POST':
         # form_data = request.form
-        reaction = request.form.reaction
+        reaction = json.dumps(request.form.reaction)
         return "You chose " + reaction
 
 
