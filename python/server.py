@@ -13,9 +13,8 @@ def hello():
     if request.method == 'POST':
         # form_data = request.form
         reaction = json.dumps(request.form.reaction)
-        return "You chose " + reaction
+        return "You chose " + json.dumps(request.form)
 
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
-
