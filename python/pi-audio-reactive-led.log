@@ -1,0 +1,140 @@
+*** Starting uWSGI 2.0.19.1 (32bit) on [Sun May  2 20:59:30 2021] ***
+compiled with version: 8.3.0 on 17 June 2020 09:19:11
+os: Linux-5.10.17-v7l+ #1403 SMP Mon Feb 22 11:33:35 GMT 2021
+nodename: raspberrypi
+machine: armv7l
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/pi/projects/pi-audio-reactive-led/python
+detected binary path: /home/pi/projects/pi-audio-reactive-led/python/piaudioreactiveledenv/bin/uwsgi
+your processes number limit is 28554
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address pi-audio-reactive-led.sock fd 3
+Python version: 3.7.3 (default, Jan 22 2021, 20:04:44)  [GCC 8.3.0]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x21127d8
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 386448 bytes (377 KB) for 5 cores
+*** Operational MODE: preforking ***
+Traceback (most recent call last):
+  File "./wsgi.py", line 1, in <module>
+    from python import app
+ModuleNotFoundError: No module named 'python'
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 10880)
+spawned uWSGI worker 1 (pid: 10881, cores: 1)
+spawned uWSGI worker 2 (pid: 10882, cores: 1)
+spawned uWSGI worker 3 (pid: 10883, cores: 1)
+spawned uWSGI worker 4 (pid: 10884, cores: 1)
+spawned uWSGI worker 5 (pid: 10885, cores: 1)
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket pi-audio-reactive-led.sock removed.
+*** Starting uWSGI 2.0.19.1 (32bit) on [Sun May  2 21:24:41 2021] ***
+compiled with version: 8.3.0 on 17 June 2020 09:19:11
+os: Linux-5.10.17-v7l+ #1403 SMP Mon Feb 22 11:33:35 GMT 2021
+nodename: raspberrypi
+machine: armv7l
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/pi/projects/pi-audio-reactive-led/python
+detected binary path: /home/pi/projects/pi-audio-reactive-led/python/piaudioreactiveledenv/bin/uwsgi
+your processes number limit is 28554
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address pi-audio-reactive-led.sock fd 3
+Python version: 3.7.3 (default, Jan 22 2021, 20:04:44)  [GCC 8.3.0]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x7f67d8
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 386448 bytes (377 KB) for 5 cores
+*** Operational MODE: preforking ***
+Traceback (most recent call last):
+  File "./wsgi.py", line 1, in <module>
+    from server import app
+  File "./server.py", line 1, in <module>
+    import led, microphone, visualization
+  File "./led.py", line 10, in <module>
+    import neopixel
+ModuleNotFoundError: No module named 'neopixel'
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 698)
+spawned uWSGI worker 1 (pid: 700, cores: 1)
+spawned uWSGI worker 2 (pid: 701, cores: 1)
+spawned uWSGI worker 3 (pid: 702, cores: 1)
+spawned uWSGI worker 4 (pid: 703, cores: 1)
+spawned uWSGI worker 5 (pid: 704, cores: 1)
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket pi-audio-reactive-led.sock removed.
+*** Starting uWSGI 2.0.19.1 (32bit) on [Sun May  2 21:35:13 2021] ***
+compiled with version: 8.3.0 on 17 June 2020 09:19:11
+os: Linux-5.10.17-v7l+ #1403 SMP Mon Feb 22 11:33:35 GMT 2021
+nodename: raspberrypi
+machine: armv7l
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/pi/projects/pi-audio-reactive-led/python
+detected binary path: /home/pi/projects/pi-audio-reactive-led/python/piaudioreactiveledenv/bin/uwsgi
+your processes number limit is 28554
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address pi-audio-reactive-led.sock fd 3
+Python version: 3.7.3 (default, Jan 22 2021, 20:04:44)  [GCC 8.3.0]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x1e967d8
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 386448 bytes (377 KB) for 5 cores
+*** Operational MODE: preforking ***
+Traceback (most recent call last):
+  File "./wsgi.py", line 1, in <module>
+    from server import app
+  File "./server.py", line 1, in <module>
+    import led, microphone, visualization
+  File "./led.py", line 10, in <module>
+    import neopixel
+ModuleNotFoundError: No module named 'neopixel'
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1473)
+spawned uWSGI worker 1 (pid: 1475, cores: 1)
+spawned uWSGI worker 2 (pid: 1476, cores: 1)
+spawned uWSGI worker 3 (pid: 1477, cores: 1)
+spawned uWSGI worker 4 (pid: 1478, cores: 1)
+spawned uWSGI worker 5 (pid: 1479, cores: 1)
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket pi-audio-reactive-led.sock removed.
