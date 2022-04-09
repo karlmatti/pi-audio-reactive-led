@@ -18,13 +18,20 @@ def start_stream(callback):
                     frames_per_buffer=frames_per_buffer)
     overflows = 0
     prev_ovf_time = time.time()
+
+    player = p.open(format=pyaudio.paInt16,
+                    rate=config.MIC_RATE,
+                    channels=1,
+                    output=True,
+                    frames_per_buffer=frames_per_buffer)
     while True:
         try:
             y = np.fromstring(stream.read(frames_per_buffer, exception_on_overflow=False), dtype=np.int16)
-            y = y.astype(np.float32)
+            y_float32 = y.astype(np.float32)
 
             stream.read(stream.get_read_available(), exception_on_overflow=False)
-            callback(y)
+            player.write(y, frames_per_buffer)
+            callback(y_float32)
         except IOError:
             overflows += 1
             if time.time() > prev_ovf_time + 1:
